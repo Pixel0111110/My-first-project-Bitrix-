@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  web:
+    image: nginx:alpine
+    container_name: bitrix-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+    networks:
+      - bitrix-network
+
+  php:
+    image: wodby/php:8.1
+    container_name: bitrix-php
+    environment:
+      PHP_MEMORY_LIMIT: 512M
+      PHP_MAX_EXECUTION_TIME: 300
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - bitrix-network
+
+  db:
+    image: mysql:8.0
+    container_name: bitrix-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: bitrix
+      MYSQL_USER: bitrix
+      MYSQL_PASSWORD: bitrix
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - bitrix-network
+
+volumes:
+  db_data:
+
+networks:
+  bitrix-network:

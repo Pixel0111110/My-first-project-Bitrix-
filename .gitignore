@@ -1,0 +1,24 @@
+# Ядро Bitrix
+/bitrix/
+
+# Кэш и временные файлы
+/upload/resize_cache/
+/upload/tmp/
+/bitrix/cache/
+/bitrix/managed_cache/
+/bitrix/stack_cache/
+/bitrix/backup/
+/bitrix/updates/
+/bitrix/log/
+
+# Файлы окружения
+.env
+*.env
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Базы данных
+*.sql
+*.dump

@@ -23,6 +23,7 @@ docker-compose ps
 
 # Просмотр логов
 docker-compose logs
+
 После запуска открыть в браузере: http://localhost
 ```
 

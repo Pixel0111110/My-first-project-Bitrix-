@@ -22,3 +22,39 @@ Thumbs.db
 # Базы данных
 *.sql
 *.dump
+
+# Дополнительные папки Bitrix
+/local/cache/
+/local/managed_cache/
+/local/templates/
+/local/components/
+/local/php_interface/
+
+# Логи
+/local/logs/
+*.log
+
+# Резервные копии и временные файлы
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Пользовательские файлы
+/upload/users/
+/upload/support/
+
+# Конфигурационные файлы (если не версионируются)
+/bitrix/php_interface/dbconn.php
+/bitrix/.settings.php
+/bitrix/settings.php
+
+# Документация
+/docs/
+/readme/

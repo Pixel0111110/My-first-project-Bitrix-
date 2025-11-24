@@ -1,15 +1,15 @@
 # Ядро Bitrix
-/bitrix/
+bitrix
 
 # Кэш и временные файлы
-/upload/resize_cache/
-/upload/tmp/
-/bitrix/cache/
-/bitrix/managed_cache/
-/bitrix/stack_cache/
-/bitrix/backup/
-/bitrix/updates/
-/bitrix/log/
+upload/resize_cache
+upload/tmp
+bitrix/cache
+bitrix/managed_cache
+bitrix/stack_cache
+bitrix/backup
+bitrix/updates
+bitrix/log
 
 # Файлы окружения
 .env
@@ -24,14 +24,14 @@ Thumbs.db
 *.dump
 
 # Дополнительные папки Bitrix
-/local/cache/
-/local/managed_cache/
-/local/templates/
-/local/components/
-/local/php_interface/
+local/cache
+local/managed_cache
+local/templates
+local/components
+local/php_interface
 
 # Логи
-/local/logs/
+local/logs
 *.log
 
 # Резервные копии и временные файлы
@@ -41,8 +41,8 @@ Thumbs.db
 *.backup
 
 # IDE
-.idea/
-.vscode/
+.idea
+.vscode
 *.swp
 *.swo
 

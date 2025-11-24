@@ -125,4 +125,36 @@ class employees extends CModule
         return true;
     }
 }
+public function InstallFiles()
+{
+    CopyDirFiles(
+        __DIR__ . '/admin',
+        $_SERVER['DOCUMENT_ROOT'] . '/bitrix/admin',
+        true, true
+    );
+    
+    CopyDirFiles(
+        __DIR__ . '/components',
+        $_SERVER['DOCUMENT_ROOT'] . '/local/components',
+        true, true
+    );
+    
+    // Копируем меню
+    CopyDirFiles(
+        __DIR__ . '/menu.php',
+        $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/employees/menu.php',
+        true, true
+    );
+    
+    return true;
+}
+
+public function UnInstallFiles()
+{
+    DeleteDirFiles(__DIR__ . '/admin', $_SERVER['DOCUMENT_ROOT'] . '/bitrix/admin');
+    DeleteDirFiles(__DIR__ . '/components', $_SERVER['DOCUMENT_ROOT'] . '/local/components');
+    DeleteDirFiles(__DIR__ . '/menu.php', $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/employees/menu.php');
+    
+    return true;
+}
 ?>
